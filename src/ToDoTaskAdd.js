@@ -61,20 +61,20 @@ class ToDoTaskAddInner extends React.Component {
 			<div className="card-hover-shadow-2x mb-3 card">
 				<div className="card-header-tab card-header">
 					<div className="card-header-title font-size-lg text-capitalize font-weight-normal">
-						<i className="fa fa-tasks"></i>&nbsp;Add Task
+						<i className="fa fa-tasks"></i>&nbsp;Добавить заказ
 					</div>
 				</div>
 				<form onSubmit={this.onAddFormSubmit}>
 					<div className="widget-content">
 						<div className="widget-content-wrapper">
-							<input type="text" value={this.state.name} onChange={this.onNameChange} placeholder="Name"/>
-							<input type="text" value={this.state.description} onChange={this.onDescriptionChange} placeholder="Description"/>
-							<input type="submit" value="Add" className="btn btn-primary"/>
+							<input type="text" value={this.state.name} onChange={this.onNameChange} placeholder="Название"/>
+							<input type="text" value={this.state.description} onChange={this.onDescriptionChange} placeholder="Описание"/>
+							<input type="submit" value="Добавить" className="btn btn-primary"/>
 						</div>
 					</div>
 				</form>
 				<div className="d-block text-right card-footer">
-					<NavLink to='/' className="btn btn-primary"> Back to list </NavLink>
+					<NavLink to='/' className="btn btn-primary"> Перейти в заказы </NavLink>
 				</div>
 			</div>
 		)
