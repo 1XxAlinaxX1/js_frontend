@@ -15,7 +15,7 @@ class ToDoTask extends React.Component {
 	onStatusClick(e){
 		e.preventDefault();
 
-		fetch(`tasks/${this.props.task._id}`, {
+		fetch(`zakaz/${this.props.task._id}`, {
 			method: 'PATCH',
 			body: JSON.stringify({
 				done: !this.props.task.done
@@ -37,7 +37,7 @@ class ToDoTask extends React.Component {
 	onDeleteClick(e){
 		e.preventDefault();
 		
-		fetch(`tasks/${this.props.task._id}`,{
+		fetch(`zakaz/${this.props.task._id}`,{
 			method: 'DELETE'
 		}).then((res)=>{
 			if(res.status === 200){
@@ -58,9 +58,12 @@ class ToDoTask extends React.Component {
                       <div className="widget-content-wrapper">
                         <div className="widget-content-left">
                           <div className="widget-heading">{this.props.task.name}</div>
-                          <div className="widget-subheading">
-                            <div>{this.props.task.description}</div>
-                          </div>
+							  <div className="widget-subheading">
+								<div>{this.props.task.description}</div>
+							  </div>
+							  <div className="widget-subheading">
+								<div>{this.props.task.op}</div>
+							  </div>
                         </div>
                         <div className="widget-content-right">
                           <button className="border-0 btn-transition btn btn-outline-success"onClick={this.onStatusClick}>

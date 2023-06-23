@@ -7,19 +7,22 @@ import ToDoTaskAdd from './ToDoTaskAdd';
 import { todoAddAll } from './actions';
 
 
+
 class App extends React.Component {
 	componentDidMount(){
-		fetch('tasks').then(function(res){
+		fetch('zakaz').then(function(res){
 			return res.json();
 		}).then((data)=>{
 			this.props.dispatch(todoAddAll(data));
 		});
 	}
 	
+	
+	
 	render() {
 	  return (
 		<div className="row d-flex justify-content-center container">
-			<div className="col-md-8">
+			<div className="col-md-10">
 				<Provider store={this.props.store}>
 				<Router>
 					<Routes>

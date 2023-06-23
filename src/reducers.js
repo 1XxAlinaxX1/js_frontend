@@ -12,7 +12,8 @@ function todo(state = [], action) {
 					_id: action._id, 
 					name: action.name, 
 					description: action.description, 
-					done: false
+					done: false,
+					op: action.op
 				}
 			]
 		case TODO_ADD_ALL:
@@ -36,5 +37,5 @@ function todo(state = [], action) {
 }
 
 export default combineReducers({
-	tasks: todo
+	zakaz: todo
 });
